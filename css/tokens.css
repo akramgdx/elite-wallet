@@ -1,0 +1,66 @@
+/* Design tokens + theme engine.
+ * <html data-theme="emerald" data-mode="light|dark"> selects a palette. Every component only uses these variables.
+ * The user-picked accent is applied by JS as inline --primary/--on-primary overrides. */
+:root {
+  --font: 'Manrope', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --font-num: 'Manrope', system-ui, sans-serif;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-pill: 999px;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 72px; --sp-9: 112px;
+  --w-page: 1200px; --w-sidebar: 256px; --w-content: 1120px;
+  --t-fast: 120ms ease; --t-med: 240ms ease;
+  --focus: 0 0 0 3px color-mix(in srgb, var(--primary) 45%, transparent);
+}
+:root[lang='ar'] { --font: 'Tajawal', 'Manrope', 'Segoe UI', system-ui, sans-serif; --font-num: 'Tajawal', 'Manrope', system-ui, sans-serif; }
+
+/* semantic colors shared by mode */
+[data-mode='light'] {
+  --success: #15803d; --warning: #b45309; --danger: #b91c1c; --info: #1d4ed8;
+  --c2: #2563eb; --c3: #d97706; --c4: #7c3aed; --c5: #db2777; --c6: #0d9488;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 8px 24px rgba(16, 24, 40, .06);
+  --shadow-lg: 0 2px 6px rgba(16, 24, 40, .08), 0 24px 60px rgba(16, 24, 40, .14);
+  color-scheme: light;
+}
+[data-mode='dark'] {
+  --success: #4ade80; --warning: #fbbf24; --danger: #f87171; --info: #60a5fa;
+  --c2: #60a5fa; --c3: #fbbf24; --c4: #a78bfa; --c5: #f472b6; --c6: #2dd4bf;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 8px 24px rgba(0, 0, 0, .28);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, .4), 0 28px 70px rgba(0, 0, 0, .5);
+  color-scheme: dark;
+}
+
+/* ---- palettes: bg (page) · soft (sidebar / alt band) · surface (cards) · surface2 · text · muted · border · primary ---- */
+/* Midnight Dark (dark only) */
+[data-theme='midnight'] { --bg: #0a1020; --soft: #0d1527; --surface: #121b30; --surface-2: #18233d; --text: #e8edf7; --muted: #97a3bc; --border: #25324f; --primary: #3ddbaa; --on-primary: #04251b; --chart-1: #3ddbaa; }
+/* Pure Light (light only) */
+[data-theme='light'] { --bg: #f5f7fa; --soft: #eef1f5; --surface: #ffffff; --surface-2: #f3f5f8; --text: #121a2b; --muted: #5b6678; --border: #dde2ea; --primary: #0b7a68; --on-primary: #ffffff; --chart-1: #0b7a68; }
+
+/* Emerald Finance */
+[data-theme='emerald'][data-mode='light'] { --bg: #f3f8f5; --soft: #e8f1ec; --surface: #ffffff; --surface-2: #f0f6f2; --text: #0f2a1e; --muted: #53695c; --border: #d3e2d9; --primary: #0a7d4f; --on-primary: #ffffff; --chart-1: #0a7d4f; }
+[data-theme='emerald'][data-mode='dark'] { --bg: #07140e; --soft: #0a1b13; --surface: #0f2419; --surface-2: #143022; --text: #e5f4ec; --muted: #8fb0a0; --border: #1f3e2e; --primary: #34d399; --on-primary: #03281a; --chart-1: #34d399; }
+/* Ocean Blue */
+[data-theme='ocean'][data-mode='light'] { --bg: #f2f7fd; --soft: #e6eff9; --surface: #ffffff; --surface-2: #eef4fb; --text: #0e2038; --muted: #51657f; --border: #d2deed; --primary: #1d63d1; --on-primary: #ffffff; --chart-1: #1d63d1; }
+[data-theme='ocean'][data-mode='dark'] { --bg: #07111f; --soft: #0a1729; --surface: #0f1e35; --surface-2: #14284a; --text: #e6eefb; --muted: #90a5c4; --border: #1f3558; --primary: #5aa2ff; --on-primary: #05172e; --chart-1: #5aa2ff; }
+/* Violet Modern */
+[data-theme='violet'][data-mode='light'] { --bg: #f7f5fd; --soft: #efebfa; --surface: #ffffff; --surface-2: #f4f1fc; --text: #1b1535; --muted: #625b80; --border: #e0daf2; --primary: #6642dc; --on-primary: #ffffff; --chart-1: #6642dc; }
+[data-theme='violet'][data-mode='dark'] { --bg: #0e0a1d; --soft: #130e27; --surface: #1a1433; --surface-2: #231b44; --text: #eeeafc; --muted: #a59dc7; --border: #2f2558; --primary: #a78bfa; --on-primary: #190b45; --chart-1: #a78bfa; }
+/* Rose Elegant */
+[data-theme='rose'][data-mode='light'] { --bg: #fdf5f7; --soft: #f9ebef; --surface: #ffffff; --surface-2: #fbeff2; --text: #2a1219; --muted: #7a5560; --border: #f0d6dd; --primary: #c42a60; --on-primary: #ffffff; --chart-1: #c42a60; }
+[data-theme='rose'][data-mode='dark'] { --bg: #170a10; --soft: #1e0e16; --surface: #281520; --surface-2: #341c2a; --text: #fbe9ef; --muted: #c39aa9; --border: #4a2638; --primary: #fb7fa5; --on-primary: #3a0a1c; --chart-1: #fb7fa5; }
+/* Graphite */
+[data-theme='graphite'][data-mode='light'] { --bg: #f4f4f5; --soft: #ebebed; --surface: #ffffff; --surface-2: #f1f1f3; --text: #17181c; --muted: #5d6068; --border: #dcdce0; --primary: #3b4352; --on-primary: #ffffff; --chart-1: #3b4352; }
+[data-theme='graphite'][data-mode='dark'] { --bg: #101113; --soft: #15161a; --surface: #1b1d21; --surface-2: #23262b; --text: #ececee; --muted: #9a9da6; --border: #2e3137; --primary: #c5ccd8; --on-primary: #14171c; --chart-1: #c5ccd8; }
+/* Warm Sand */
+[data-theme='sand'][data-mode='light'] { --bg: #f8f3ea; --soft: #f0e8d9; --surface: #fffdf9; --surface-2: #f5eee1; --text: #2c2216; --muted: #7a6a53; --border: #e6dac5; --primary: #a4561a; --on-primary: #ffffff; --chart-1: #a4561a; }
+[data-theme='sand'][data-mode='dark'] { --bg: #16110a; --soft: #1c160d; --surface: #241c11; --surface-2: #2e2416; --text: #f6ecdb; --muted: #bba98a; --border: #43351f; --primary: #e9a35c; --on-primary: #2e1604; --chart-1: #e9a35c; }
+
+/* derived tokens (computed from the palette so every theme gets them) */
+:root, [data-theme] {
+  --primary-soft: color-mix(in srgb, var(--primary) 13%, var(--surface));
+  --primary-line: color-mix(in srgb, var(--primary) 35%, var(--border));
+  --success-soft: color-mix(in srgb, var(--success) 14%, var(--surface));
+  --warning-soft: color-mix(in srgb, var(--warning) 16%, var(--surface));
+  --danger-soft: color-mix(in srgb, var(--danger) 13%, var(--surface));
+  --info-soft: color-mix(in srgb, var(--info) 13%, var(--surface));
+  --income: var(--success); --expense: var(--danger);
+  --overlay: color-mix(in srgb, var(--bg) 60%, rgba(0, 0, 0, .55));
+}

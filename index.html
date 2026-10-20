@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="midnight" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a1020">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>Smart Money Manager</title>
+<meta name="description" content="Smart Money Manager — track spending, plan budgets, manage student expenses and reach your savings goals. Free, private, runs in your browser.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/landing.css">
+<script src="js/boot.js"></script>
+</head>
+<body class="lp">
+<a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
+
+<header class="lp-nav" id="top-nav">
+  <div class="lp-wrap lp-nav-in">
+    <a class="lp-brand" href="index.html" id="brand" data-i18n-attr="aria-label:lp.nav.home"><span id="brand-logo"></span><span class="lp-brand-name">Smart Money Manager</span></a>
+    <nav class="lp-links" id="nav-links" data-i18n-attr="aria-label:lp.nav.primary">
+      <a href="#features" data-nav="features" data-i18n="lp.nav.features">Features</a>
+      <a href="#students" data-nav="students" data-i18n="lp.nav.students">For students</a>
+      <a href="#assistant" data-nav="assistant" data-i18n="lp.nav.assistant">Assistant</a>
+      <a href="#personalize" data-nav="personalize" data-i18n="lp.nav.personalize">Personalize</a>
+    </nav>
+    <div class="lp-nav-tools">
+      <label class="sr-only" for="lang-select" data-i18n="lp.nav.language">Language</label>
+      <select class="select lp-lang" id="lang-select"><option value="en">English</option><option value="fr">Français</option><option value="ar">العربية</option></select>
+      <button class="btn btn-ghost btn-icon" id="mode-toggle" type="button" data-i18n-attr="aria-label:lp.nav.theme;title:lp.nav.theme"></button>
+      <a class="btn btn-primary lp-nav-cta" href="app.html" data-i18n="lp.nav.getStarted">Get Started</a>
+      <button class="btn btn-ghost btn-icon lp-burger" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" data-i18n-attr="aria-label:lp.nav.menu"></button>
+    </div>
+  </div>
+  <div class="lp-mobile" id="mobile-menu" hidden>
+    <a href="#features" data-i18n="lp.nav.features">Features</a>
+    <a href="#students" data-i18n="lp.nav.students">For students</a>
+    <a href="#assistant" data-i18n="lp.nav.assistant">Assistant</a>
+    <a href="#personalize" data-i18n="lp.nav.personalize">Personalize</a>
+    <a class="btn btn-primary" href="app.html" data-i18n="lp.nav.getStarted">Get Started</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <!-- 1 Hero -->
+  <section class="lp-sec lp-hero" id="hero">
+    <div class="lp-wrap lp-hero-grid">
+      <div class="lp-hero-copy reveal">
+        <p class="eyebrow" data-i18n="lp.hero.eyebrow">Personal finance, made clear</p>
+        <h1 data-i18n="lp.hero.title">Take control of your money. Build your future.</h1>
+        <p class="lp-lead" data-i18n="lp.hero.text"></p>
+        <div class="lp-cta-row">
+          <a class="btn btn-primary btn-lg" href="app.html" id="cta-start" data-i18n="lp.cta.start">Get Started</a>
+          <a class="btn btn-secondary btn-lg" href="#features" id="cta-explore" data-i18n="lp.cta.explore">Explore Features</a>
+        </div>
+        <p class="muted lp-note" data-i18n="lp.hero.note"></p>
+      </div>
+      <div class="lp-hero-art reveal" role="img" data-i18n-attr="aria-label:lp.hero.previewLabel"><div class="lp-window" id="p-hero"></div></div>
+    </div>
+  </section>
+
+  <!-- 2 Financial clarity -->
+  <section class="lp-sec lp-alt" id="features">
+    <div class="lp-wrap lp-split">
+      <div class="lp-copy reveal">
+        <p class="eyebrow" data-i18n="lp.s2.eyebrow"></p><h2 data-i18n="lp.s2.title"></h2><p class="lp-lead" data-i18n="lp.s2.text"></p>
+        <ul class="lp-points"><li data-i18n="lp.s2.p1"></li><li data-i18n="lp.s2.p2"></li><li data-i18n="lp.s2.p3"></li></ul>
+      </div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-clarity"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 3 Transactions -->
+  <section class="lp-sec" id="transactions">
+    <div class="lp-wrap lp-split lp-rev">
+      <div class="lp-copy reveal">
+        <p class="eyebrow" data-i18n="lp.s3.eyebrow"></p><h2 data-i18n="lp.s3.title"></h2><p class="lp-lead" data-i18n="lp.s3.text"></p>
+        <ul class="lp-points"><li data-i18n="lp.s3.p1"></li><li data-i18n="lp.s3.p2"></li><li data-i18n="lp.s3.p3"></li></ul>
+      </div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-tx"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 4 Budgeting -->
+  <section class="lp-sec lp-alt" id="budgeting">
+    <div class="lp-wrap lp-split">
+      <div class="lp-copy reveal">
+        <p class="eyebrow" data-i18n="lp.s4.eyebrow"></p><h2 data-i18n="lp.s4.title"></h2><p class="lp-lead" data-i18n="lp.s4.text"></p>
+        <ul class="lp-points"><li data-i18n="lp.s4.p1"></li><li data-i18n="lp.s4.p2"></li><li data-i18n="lp.s4.p3"></li></ul>
+      </div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-budget"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 5 Goals -->
+  <section class="lp-sec" id="goals">
+    <div class="lp-wrap lp-split lp-rev">
+      <div class="lp-copy reveal"><p class="eyebrow" data-i18n="lp.s5.eyebrow"></p><h2 data-i18n="lp.s5.title"></h2><p class="lp-lead" data-i18n="lp.s5.text"></p></div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-goals"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 6 Habits -->
+  <section class="lp-sec lp-alt" id="habits">
+    <div class="lp-wrap lp-split">
+      <div class="lp-copy reveal">
+        <p class="eyebrow" data-i18n="lp.s6.eyebrow"></p><h2 data-i18n="lp.s6.title"></h2><p class="lp-lead" data-i18n="lp.s6.text"></p>
+        <ul class="lp-points"><li data-i18n="lp.s6.p1"></li><li data-i18n="lp.s6.p2"></li><li data-i18n="lp.s6.p3"></li></ul>
+      </div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-habits"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 7 Assistant -->
+  <section class="lp-sec" id="assistant">
+    <div class="lp-wrap lp-split lp-rev">
+      <div class="lp-copy reveal">
+        <p class="eyebrow" data-i18n="lp.s7.eyebrow"></p><h2 data-i18n="lp.s7.title"></h2><p class="lp-lead" data-i18n="lp.s7.text"></p>
+        <p class="lp-honest" data-i18n="lp.s7.honest"></p>
+        <p class="muted" data-i18n="lp.s7.voice"></p>
+      </div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-chat"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 8 Students -->
+  <section class="lp-sec lp-alt" id="students">
+    <div class="lp-wrap lp-split">
+      <div class="lp-copy reveal"><p class="eyebrow" data-i18n="lp.s8.eyebrow"></p><h2 data-i18n="lp.s8.title"></h2><p class="lp-lead" data-i18n="lp.s8.text"></p>
+        <ul class="lp-points"><li data-i18n="lp.s8.allowance"></li><li data-i18n="lp.s8.foodTransport"></li><li data-i18n="lp.s8.books"></li><li data-i18n="lp.s8.scholarship"></li><li data-i18n="lp.s8.emergency"></li></ul></div>
+      <div class="lp-art reveal"><div class="lp-window" id="p-student"></div><p class="lp-sample" data-i18n="lp.sample"></p></div>
+    </div>
+  </section>
+
+  <!-- 9 Personalize -->
+  <section class="lp-sec" id="personalize">
+    <div class="lp-wrap lp-center reveal">
+      <p class="eyebrow" data-i18n="lp.s9.eyebrow"></p><h2 data-i18n="lp.s9.title"></h2><p class="lp-lead" data-i18n="lp.s9.text"></p>
+      <h3 class="lp-h3" data-i18n="lp.s9.themes"></h3>
+      <div class="lp-themes" id="theme-grid" role="group" data-i18n-attr="aria-label:lp.s9.themes"></div>
+      <h3 class="lp-h3" data-i18n="lp.s9.languages"></h3>
+      <div class="seg lp-langs" id="lang-seg" role="group" data-i18n-attr="aria-label:lp.s9.languages"></div>
+      <p class="muted" data-i18n="lp.s9.modes"></p><p class="muted" data-i18n="lp.s9.try"></p>
+    </div>
+  </section>
+
+  <!-- trust -->
+  <section class="lp-sec lp-alt" id="trust">
+    <div class="lp-wrap reveal">
+      <h2 class="lp-center-h" data-i18n="lp.trust.title"></h2>
+      <div class="lp-trust">
+        <div class="card"><h3 data-i18n="lp.trust.t1"></h3><p class="muted" data-i18n="lp.trust.d1"></p></div>
+        <div class="card"><h3 data-i18n="lp.trust.t2"></h3><p class="muted" data-i18n="lp.trust.d2"></p></div>
+        <div class="card"><h3 data-i18n="lp.trust.t3"></h3><p class="muted" data-i18n="lp.trust.d3"></p></div>
+        <div class="card"><h3 data-i18n="lp.trust.t4"></h3><p class="muted" data-i18n="lp.trust.d4"></p></div>
+      </div>
+      <p class="muted lp-center-h" data-i18n="lp.sampleNote"></p>
+    </div>
+  </section>
+
+  <!-- 10 Final CTA -->
+  <section class="lp-sec lp-final" id="start">
+    <div class="lp-wrap lp-center reveal">
+      <h2 data-i18n="lp.s10.title"></h2><p class="lp-lead" data-i18n="lp.s10.text"></p>
+      <a class="btn btn-primary btn-lg" href="app.html" id="cta-final" data-i18n="lp.cta.start">Get Started</a>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="lp-wrap lp-foot-in">
+    <span class="lp-brand"><span id="foot-logo"></span><span class="muted" data-i18n="lp.footer.text"></span></span>
+    <span class="lp-foot-links"><a href="app.html" data-i18n="lp.footer.app"></a><a href="#top-nav" data-i18n="lp.footer.top"></a></span>
+  </div>
+</footer>
+
+<script src="js/core/money.js"></script>
+<script src="js/core/defaults.js"></script>
+<script src="js/core/finance.js"></script>
+<script src="js/core/store.js"></script>
+<script src="js/ui/i18n.js"></script>
+<script src="js/i18n/en.js"></script><script src="js/i18n/fr.js"></script><script src="js/i18n/ar.js"></script>
+<script src="js/i18n/landing-en.js"></script><script src="js/i18n/landing-fr.js"></script><script src="js/i18n/landing-ar.js"></script>
+<script src="js/ui/icons.js"></script>
+<script src="js/ui/theme.js"></script>
+<script src="js/ui/charts.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>
